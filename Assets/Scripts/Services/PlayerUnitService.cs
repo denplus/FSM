@@ -47,10 +47,13 @@ namespace Services
 
             if (canUpgradeUnit)
             {
+                UnitTypes biggerType =
+                    (int) removeUnit.Type > (int) updateUnit.Type ? removeUnit.Type : updateUnit.Type;
+
                 playerUnits.Remove(updateUnit);
                 playerUnits.Remove(removeUnit);
 
-                UnitTypes nextType = (UnitTypes) ((int) updateUnit.Type + 1);
+                UnitTypes nextType = (UnitTypes) ((int) biggerType + 1);
                 UnitInfo unitData = gameSettings.GetUnitDataByType(nextType);
                 playerUnits.Add(unitData);
 
