@@ -14,3 +14,5 @@ All classes are written with SOLID principles (At least I hope so :) )
 Also, I have divided some code layers with help of assembly definitions: Data, Utils, Services, ViewPresentation. This division helps to maintain code and keep good understanding of abstract logic for each layer.
 
 The configuration are all in GameSettings scriptable object.
+
+Services can be use in different project, they are separed from main project logic and can be transferred. 
